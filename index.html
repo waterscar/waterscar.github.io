@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="./nc3-3.10.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./nc3-3.10.0/css/nc.min.css">
+    <link rel="stylesheet" href="./resources/css/custom.css">
+
+    <link rel="icon" type="image/png" href="./nc3-3.10.0/img/favicons/favicon-32x32.png" sizes="32x32"/>
+
+    <title>Onboard Demo</title>
+</head>
+<body>
+<div class="container-fluid cbp-wrapper no-padding">
+    <nav class="navbar navbar-default">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-navbar-collapse-ex1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Visma Finance</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-navbar-collapse-ex1">
+
+            <p class="navbar-text navbar-right">Signed in as <a href="#" class="navbar-link">Mark Otto</a></p>
+
+            <ul class="nav navbar-nav navbar-right">
+
+                <p class="navbar-text"> Sign with BankID</p>
+
+                <li class="icon">
+                    <a role="button" aria-label="..." href="#">
+                        <span class="bankidicon vismaicon vismaicon-menu" aria-hidden="true"></span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="col-md-3 cbp-spmenu cbp-spmenu-open no-side-padding full-height-menu" id="cbp-spmenu-s1"
+         role="complementary" style="height: 369px;">
+        <div class="row no-margin">
+            <nav class="sidenav col-md-3">
+                <div class="inner-scroll no-padding">
+                    <ul class="nav">
+                        <li>
+                            <a href="#lorem-ipsum">Back to eAccount</a>
+                        </li>
+                        <li class="active active-child">
+                            <a href="#examples">Visma Finance</a>
+                            <ul class="nav">
+                                <li class="active"><a href="Invoices.php">On board</a></li>
+                                <li><a href="Due-invoice.php">History</a></li>
+                                <li><a href="Customer.php">Customer</a></li>
+                            </ul>
+                        </li>
+                        <li class="show-nav">
+                            <a id="showLeftPush">Show/Hide Menu</a>
+                        </li>
+                    </ul>
+                </div> <!-- /.inner-scroll -->
+            </nav>
+        </div>
+    </div>
+
+    <div class="col-md-9">
+        <h1 class="clear">
+            Customer Due Diligence / KYC
+        </h1>
+        <div class="panel panel-default">
+            <div class="panel-body">
+                <h2>This is what we know about your company - please verify and change any incorrect information!</h2>
+                <div class="row">
+                    <div class="col-md-4">
+                        <legend>Company information</legend>
+                        <form class="form-horizontal">
+                            <div class="form-group required">
+                                <label for="inputKundnummer" class="col-sm-5 control-label">Company name:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="inputKundnummer"
+                                           value="Frank Consulting AB"
+                                           placeholder="Frank Consulting AB">
+                                </div>
+                            </div>
+                            <div class="form-group required">
+                                <label for="inputKundnamn" class="col-sm-5 control-label">Org.nummer:</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="inputKundnamn" value="5563212354"
+                                           placeholder="Kundnamn">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inputOrganisationsnummer" class="col-sm-5 control-label">Address</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="inputOrganisationsnummer"
+                                           value="Gatan 23"
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Zip" class="col-sm-5 control-label">Zip</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="Zip" value="123 23"
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="City" class="col-sm-5 control-label">City</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="City" value="Stockholm"
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Contact" class="col-sm-5 control-label">Contact</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="Contact" value="Frank Almenning "
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Telephone" class="col-sm-5 control-label">Telephone</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="Telephone" value="0723028460"
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="Email" class="col-sm-5 control-label">Email</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="Email" value="frank@almenning.se"
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="bankgiro" class="col-sm-5 control-label">Bank Giro (for
+                                    disbursements)</label>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control" id="bankgiro" value="5556-3212"
+                                           placeholder="Organisationsnummer">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <div class="col-md-4">
+                        <legend>Signtories for the company</legend>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>SSN</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Frank Almenning</td>
+                                <td>19740504-2115</td>
+                                <td>
+                                    <span class="vismaicon vismaicon-add-circle" aria-hidden="true"></span>
+                                    <span class="vismaicon vismaicon-cancel-circle" aria-hidden="true"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-md-4">
+                        <legend>UBOs</legend>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>SSN</th>
+                                <th></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Frank Almenning</td>
+                                <td>19740504-2115</td>
+                                <td>
+                                    <span class="vismaicon vismaicon-add-circle" aria-hidden="true"></span>
+                                    <span class="vismaicon vismaicon-cancel-circle" aria-hidden="true"></span>
+                                </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="col-md-8">
+                        <legend> Approved signatories (from Bolagsverket)</legend>
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>SSN</th>
+                                <th>Full rights to sign</th>
+                                <th>Together with</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>Frank Almenning</td>
+                                <td>19740504-2115</td>
+                                <td>yes</td>
+                                <td>N/A</td>
+                            </tr>
+                            <tr>
+                                <td>Eigil Almenning</td>
+                                <td>19770606-1234</td>
+                                <td>yes</td>
+                                <td>N/A</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6">
+                        <legend>PEP/RCA</legend>
+                        <div class="input-group">
+                            <label>
+                                <input type="checkbox" value="">
+                                Is any one of the above-mentioned individuals considered PEP or RCA (see sidebar for
+                                definitions)?
+                            </label>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <legend>Purposes of using our products</legend>
+                        <label>
+                            Main purpose of using Spot Factoring?
+                        </label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+                                Liquidity
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+                                Risk transfer
+                            </label>
+                        </div>
+                        <div class="radio disabled">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios3" value="option3" disabled>
+                                None of your business
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <legend>Terms and conditions</legend>
+                        <div class="input-group">
+                            <label>
+                                <input type="checkbox" value="">
+                                I have read and accepted below T&C's
+                            </label>
+                        </div>
+                        <a href="#">Product-specific terms and conditions for Spot Factoring</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="pull-right">
+                    <p>
+                        <button type="button" class="btn btn-primary margin-right">Sign</button>
+                        <button type="button" class="btn btn-default margin-right">Cancel and return to eEkonomi</button>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <footer class="app-footer"><img src="https://ux.visma.com/weblibrary/latest/img/visma-logo.svg" width="101" alt="">
+    </footer>
+</div>
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="./nc3-3.10.0/js/jquery.js"></script>
+<script src="./nc3-3.10.0/js/bootstrap.js"></script>
+<script src="./nc3-3.10.0/js/bootstrap-tabdrop.js"></script>
+<script src="./nc3-3.10.0/js/visma-additional.js"></script>
+</body>
+</html>
