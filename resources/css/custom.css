@@ -1,3 +1,158 @@
 .bankidicon:before {
     background: url(../images/bankid.svg);
 }
+
+.navbar .nav > li.dropdown > a.dropdown-toggle p {
+    margin: 0;
+}
+
+.ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.navbar .nav > li.dropdown > a.dropdown-toggle .company-name {
+    font-size: 12px !important;
+}
+
+.navbar .nav > li.dropdown > a.dropdown-toggle .company-user {
+    font-size: 14px !important;
+}
+
+.navbar .nav.navbar-nav > li.dropdown > a.dropdown-toggle > .caret {
+    position: absolute;
+    top: 2rem;
+    right: 1rem;
+}
+
+.navbar .nav > li.dropdown {
+    border-left: 1px solid rgba(255, 255, 255, 0.1);
+    height: 42px;
+}
+
+.navbar .nav > li.dropdown > a.dropdown-toggle {
+    padding: .3rem 3rem .3rem 1.5rem;
+    border-right: 1px solid #0072B4 !important;
+    min-width: 14rem;
+}
+
+.main-header {
+    width: 100%;
+}
+
+.navbar {
+    margin-bottom: 0;
+    position: fixed;
+    top: 0;
+    height: auto;
+    z-index: 10000;
+    width: 100%;
+    font-family: 'Open Sans Light', sans-serif;
+    min-width: 76.8rem;
+    border-bottom: 1px solid #025A8E;
+}
+
+body, label, button, a, p {
+    font-family: "Open Sans", sans-serif;
+}
+
+body.sm .navbar .navbar-brand > a, body.sm .navbar .navbar-brand {
+    font-size: 2rem !important;
+}
+
+.navbar .navbar-brand.dropdown > a.dropdown-toggle {
+    color: #fff;
+    text-decoration: none;
+    padding: 7px 47px 7px 20px;
+}
+
+.navbar .navbar-brand.dropdown > a .caret {
+    background-position: 0 2px;
+    position: absolute;
+    right: 15px;
+    top: 17px;
+}
+
+.navbar .navbar-brand.dropdown {
+    padding-left: 0;
+    padding-right: 0;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar .navbar-brand {
+    padding-bottom: 6px;
+}
+
+.caret, .select-wrapper .holder:after, .btn-group .dropdown-toggle:after {
+    background-size: 66px 7px;
+}
+
+body.sm {
+    font-size: 16px !important;
+    line-height: 145% !important;
+}
+
+legend {
+    border-bottom: 1px solid #dcdcdc;
+    font-size: 16px;
+    margin-bottom: 17px;
+    margin-top: 0;
+    padding-bottom: 1px;
+    line-height: 145%;
+}
+
+body.sm .form-horizontal .radio, body.sm .form-horizontal .checkbox, body.sm .form-horizontal .radio-inline, body.sm .form-horizontal .checkbox-inline, body.sm .form-horizontal .form-group {
+    min-height: 0px;
+}
+
+body.sm .form-horizontal .control-label, body.sm .form-horizontal label {
+    padding-bottom: 3px;
+    padding-top: 3px;
+}
+
+.form-wrapper .form-group .form-label, .form-wrapper .form-group .form-input, .form-wrapper .form-group .filter-label, .form-wrapper .form-group .filter-input, .form-wrapper .form-group .form-text {
+    margin-bottom: 6px;
+}
+
+body.sm input[type="text"], body.sm input[type="password"], body.sm input[type="datetime"], body.sm input[type="datetime-local"], body.sm input[type="date"], body.sm input[type="month"], body.sm input[type="time"], body.sm input[type="week"], body.sm input[type="number"], body.sm input[type="email"], body.sm input[type="url"], body.sm input[type="search"], body.sm input[type="tel"], body.sm input[type="color"], body.sm .uneditable-input, body.sm .form-control {
+    height: 24px;
+    padding: 2px 5px;
+}
+
+body.sm label, body.sm button, body.sm a, body.sm input, body.sm select, body.sm textarea, body.sm p {
+    font-size: 13px !important;
+}
+
+body.sm table{
+    font-size: 13px !important;
+}
+
+.content-holder .sidemenuArea {
+    float: left;
+    width: 16.66667%;
+}
+
+.sidenav {
+    height: calc(100%);
+    overflow-y: auto;
+}
+
+.sidenav .inner-scroll {
+    height: calc(100%);
+    overflow: auto;
+}
+
+body .inner-scroll {
+    background: whitesmoke;
+}
+
+.content-holder .main-area {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.content-holder .main-area {
+    float: left;
+    width: 83.33333%;
+}
