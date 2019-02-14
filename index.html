@@ -10,12 +10,14 @@
     <link rel="stylesheet" href="./nc3-3.10.0/css/nc.min.css">
     <link rel="stylesheet" href="./resources/css/custom.css">
 
+    <script src="./resources/js/login.js"></script>
+
     <link rel="icon" type="image/png" href="./nc3-3.10.0/img/favicons/favicon-32x32.png" sizes="32x32"/>
 
     <title>Onboard Demo</title>
 </head>
 <body class="sm" style="display: block;">
-<div class="container-fluid cbp-wrapper no-padding">
+<div class="container-fluid cbp-wrapper no-padding hide" id="main">
     <nav class="navbar navbar-default">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
@@ -368,7 +370,8 @@
                                     <div class="input-group">
                                          <span class="input-group-btn">
                                            <button class="btn btn-primary" type="button">Sign with BankID
-                                                <span class="vismaicon bankidicon  vismaicon-sm margin-left" aria-hidden="true"></span>
+                                                <span class="vismaicon bankidicon  vismaicon-sm margin-left"
+                                                      aria-hidden="true"></span>
                                             </button>
                                          </span>
                                         <input style="height: 30px;" type="search" class="form-control"
@@ -391,11 +394,16 @@
     </div>
 </div>
 
+<div id="login">
+    <input type="password" id="password">
+    <button class="btn btn-primary" onclick="login()">login</button>
+</div>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
 <script src="./nc3-3.10.0/js/jquery.js"></script>
 <script src="./nc3-3.10.0/js/bootstrap.js"></script>
 <script src="./nc3-3.10.0/js/bootstrap-tabdrop.js"></script>
 <script src="./nc3-3.10.0/js/visma-additional.js"></script>
+
 </body>
 </html>
