@@ -88,11 +88,6 @@ body.sm .navbar .navbar-brand > a, body.sm .navbar .navbar-brand {
     background-size: 66px 7px;
 }
 
-body.sm {
-    font-size: 16px !important;
-    line-height: 145% !important;
-}
-
 legend {
     border-bottom: 1px solid #dcdcdc;
     font-size: 16px;

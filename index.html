@@ -28,14 +28,14 @@
             <div class="dropdown navbar-brand" id="product-dropdown"
                  data-bind="visible: displayServiceSelectorDropdown(), css: { selected: isProductDropdownVisible }">
                 <a class="dropdown-toggle" id="productLink" role="button" data-bind="click: toggleProductDropdown">
-                    <span data-bind="text: mainHeaderMenuHeader">Visma eEkonomi Smart</span>
+                    <span data-bind="text: mainHeaderMenuHeader">Visma Finance</span>
                     <span class="caret"></span>
                 </a>
             </div>
         </div>
         <div class="main-header">
 
-            <div class="collapse navbar-collapse" id="bs-navbar-collapse-ex1">
+            <div class="collapse navbar-collapse" id="collapse">
                 <ul class="nav navbar-nav nav-tabs navbar-right">
                     <p class="navbar-text"> Sign with BankID</p>
 
@@ -60,156 +60,41 @@
     </nav>
     <div class="content-holder">
 
-        <div class="cbp-spmenu cbp-spmenu-open no-side-padding full-height-menu sidemenuArea" id="cbp-spmenu-s1">
+        <div class="cbp-spmenu cbp-spmenu-open no-side-padding full-height-menu col-md-2 hidden-sm hidden-xs collapse" id="cbp-spmenu-s1">
             <nav class="sidenav">
                 <div class="inner-scroll no-padding">
                     <ul id="app-menu" class="nav" data-bind="foreach: menuItems">
-                        <!-- ko if: url-->
-                        <li class="" data-bind="visible: visible(), click: $root.closeMessageModal, attr: { class: id == 'inappMenuLink' || id == 'financingMenuLink' ? 'neutralMenu' : ''}">
-                            <a tabindex="-1" class="title home" data-bind="text: text, css: css, attr: { id: id, href: url }, click: $root.goto" id="dashboardMenuLink" href="#/dashboard">Startsida</a>
-                        </li>
-                        <!-- /ko -->
-                        <!-- ko if: !url--><!-- /ko -->
-
-                        <!-- ko if: url--><!-- /ko -->
-                        <!-- ko if: !url-->
-                        <li data-bind="visible: visible(), click: $root.closeMessageModal" class="">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="sales" id="saleMenuLink">Försäljning</a>
-                            <ul class="nav" data-bind="foreach: children">
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="quoteMenuLink" href="#/sales/quotes">Offerter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="orderMenuLink" href="#/sales/orders">Order</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="customerInvoicesMenuLink" href="#/sales/customerinvoices">Kundfakturor</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()" style="display: none;"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="webshopOrdersMenuLink" href="#/sales/webshoporders" style="display: none;">Webshop-order</a></li>
-
-                                <li class=""><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="customersMenuLink" href="#/sales/customers" class="noChildMenu">Kunder</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="articlesMenuLink" href="#/sales/articles">Artiklar</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()" style="display: none;"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="reportsInvoicingMenuLink" href="#/sales/reports" style="display: none;">Rapporter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()" style="display: none;"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="salesProjMenuLink" href="#/sales/projects" style="display: none;">Projekt</a></li>
-                            </ul>
-                        </li>
-                        <!-- /ko -->
-
-                        <!-- ko if: url--><!-- /ko -->
-                        <!-- ko if: !url-->
-                        <li data-bind="visible: visible(), click: $root.closeMessageModal">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases" id="purchaseMenuLink">Inköp</a>
-                            <ul class="nav" data-bind="foreach: children">
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="supplierInvoicesMenuLink" href="#/purchase/supplierinvoices">Leverantörsfakturor</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="suppliersMenuLink" href="#/purchase/suppliers">Leverantörer</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="photosMenuLink" href="#/common/photos">Bildunderlag</a></li>
-                            </ul>
-                        </li>
-                        <!-- /ko -->
-
-                        <!-- ko if: url--><!-- /ko -->
-                        <!-- ko if: !url-->
-                        <li data-bind="visible: visible(), click: $root.closeMessageModal">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="payroll" id="payrollMenuLink">Lön</a>
-                            <ul class="nav" data-bind="foreach: children">
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="payslipMenuLink" href="#/payroll/payslips">Lönebesked</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="employeeMenuLink" href="#/payroll/employees">Anställda</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()" style="display: none;"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="amessageMenuLink" href="#/payroll/amessages" style="display: none;">ONLY NO</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="amessageMenuLink" href="#/payroll/annualtaxreports">Kontrolluppgifter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="employerReportsMenuLink" href="#/accounting/employerreports">Arbetsgivardeklaration</a></li>
-                            </ul>
-                        </li>
-                        <!-- /ko -->
-
-                        <!-- ko if: url-->
-                        <li class="" data-bind="visible: visible(), click: $root.closeMessageModal, attr: { class: id == 'inappMenuLink' || id == 'financingMenuLink' ? 'neutralMenu' : ''}">
-                            <a tabindex="-1" class="title bank" data-bind="text: text, css: css, attr: { id: id, href: url }, click: $root.goto" id="reconciliationMenuLink" href="#/reconciliation">Kassa- och bankhändelser</a>
-                        </li>
-                        <!-- /ko -->
-                        <!-- ko if: !url--><!-- /ko -->
-
-                        <!-- ko if: url--><!-- /ko -->
-                        <!-- ko if: !url-->
-                        <li data-bind="visible: visible(), click: $root.closeMessageModal">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="accounting" id="accountingMenuLink">Bokföring</a>
-                            <ul class="nav" data-bind="foreach: children">
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="vouchersMenuLink" href="#/accounting/vouchers">Verifikationer</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()" style="display: none;"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="quickVoucherEntryMenuLink" href="#/accounting/quickvoucherentry" style="display: none;">Only DNK</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="accountingAnalysisMenuLink" href="#/accounting/accountinganalysis">Kontoanalys</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="vatReportsMenuLink" href="#/vat/vatreports">Momsredovisning</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="periodiccompilationMenuLink" href="#/accounting/periodiccompilation">Periodisk sammanställning</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="fiscalYearCheckListMenuLink" href="#/accounting/fiscalyearchecklist">Årsavstämning</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="inventoryItemMenuLink" href="#/accounting/inventoryItem">Inventarier</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="costCenterMenuLink" href="#/accounting/costcenter">Resultatenheter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="projectMenuLink" href="#/accounting/projects">Projekt</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="reportsMenuLink" href="#/accounting/reports">Rapporter</a></li>
-                            </ul>
-                        </li>
-                        <!-- /ko -->
-
-                        <!-- ko if: url--><!-- /ko -->
-                        <!-- ko if: !url-->
-                        <li data-bind="visible: visible(), click: $root.closeMessageModal">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="settings" id="settingsMenuLink">Inställningar</a>
-                            <ul class="nav" data-bind="foreach: children">
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="companySettingsMenuLink" href="#/companysettings">Företagsinställningar</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="bankAccountsMenuLink" href="#/common/bankaccounts">Kassa- och bankkonton</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="fiscalYearsMenuLink" href="#/accounting/fiscalyears">Räkenskapsår och IB</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="chartOfAccountsMenuLink" href="#/accounting/accounts">Kontoplan</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="articleAccountCodingsMenuLink" href="#/common/articleaccountcodings">Artikelkonteringar</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="inventoryAccountTemplateMenuLink" href="#/common/inventoryaccountingtemplates">Inventariekontering</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()" style="display: none;"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="permissionsMenuLink" href="#/common/permissions" style="display: none;">Behörigheter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="accountingTemplatesMenuLink" href="#/accounting/templates">Bokföringsförslag</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="articleLabelsMenuLink" href="#/sales/articlelabels">Artikeletiketter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="customerLabelsMenuLink" href="#/sales/customerlabels">Kundetiketter</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="importExportMenuLink" href="#/importexport/importexports">Import och export</a></li>
-                            </ul>
+                        <li data-bind="visible: visible()" class="active">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases"
+                               id="purchaseMenuLink">Company info</a>
                         </li>
 
-
-
-                        <li data-bind="visible: visible()" class="active-child active">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases" id="purchaseMenuLink">Visma Finance</a>
-                            <ul class="nav" data-bind="foreach: children">
-                                <li class="active"><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="supplierInvoicesMenuLink" href="#/purchase/supplierinvoices">Customer on board</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="suppliersMenuLink" href="#/purchase/suppliers">KYC</a></li>
-
-                                <li><span class="line" data-bind="visible: visible()"></span><a tabindex="-1" data-bind="visible: visible(), text: text, attr: { id: id, href: url }, click: $root.goto" id="photosMenuLink" href="#/common/photos">Other</a></li>
-                            </ul>
+                        <li data-bind="visible: visible()">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">Board members</a>
                         </li>
 
+                        <li data-bind="visible: visible()">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">UBOs</a>
+                        </li>
+                        <li data-bind="visible: visible()">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">Signatories</a>
+                        </li>
+                        <li data-bind="visible: visible()">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">PEP/RCA</a>
+                        </li>
+                        <li data-bind="visible: visible()">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">Purpose</a>
+                        </li>
+                        <li data-bind="visible: visible()">
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">Terms &
+                                conditions</a>
+                        </li>
                     </ul>
                 </div>
             </nav>
         </div>
 
-        <div class="full-height-container main-area">
+        <div class="full-height-container col-md-10">
             <h1 class="clear">
                 Customer Due Diligence / KYC
             </h1>
@@ -219,103 +104,137 @@
                         information!</h2>
                     <div class="form-wrapper">
                         <div class="row">
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <legend>Company information</legend>
-                                <form class="form-horizontal">
-                                    <div class="form-group required">
-                                        <label for="inputKundnummer" class="col-sm-5 control-label">Company
-                                            name:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputKundnummer"
-                                                   value="Frank Consulting AB"
-                                                   placeholder="Frank Consulting AB">
-                                        </div>
-                                    </div>
-                                    <div class="form-group required">
-                                        <label for="inputKundnamn" class="col-sm-5 control-label">Org.nummer:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputKundnamn"
-                                                   value="5563212354"
-                                                   placeholder="Kundnamn">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputOrganisationsnummer"
-                                               class="col-sm-5 control-label">Address</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputOrganisationsnummer"
-                                                   value="Gatan 23"
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Zip" class="col-sm-5 control-label">Zip</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Zip" value="123 23"
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="City" class="col-sm-5 control-label">City</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="City" value="Stockholm"
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
 
-                                    <div class="form-group">
-                                        <label for="Contact" class="col-sm-5 control-label">Contact</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Contact"
-                                                   value="Frank Almenning "
-                                                   placeholder="Organisationsnummer">
+                                <form class="form-horizontal">
+                                    <div class="col-md-6">
+                                        <div class="form-group required">
+                                            <label for="inputKundnummer" class="col-sm-5 control-label">Company
+                                                name:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="inputKundnummer" readonly
+                                                       value="Frank Consulting AB"
+                                                       placeholder="Frank Consulting AB">
+                                            </div>
+                                        </div>
+                                        <div class="form-group required">
+                                            <label for="inputKundnamn"
+                                                   class="col-sm-5 control-label">Org.nummer:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="inputKundnamn" readonly
+                                                       value="5563212354"
+                                                       placeholder="Kundnamn">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputOrganisationsnummer"
+                                                   class="col-sm-5 control-label">Address</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="inputOrganisationsnummer"
+                                                       readonly
+                                                       value="Gatan 23"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Zip" class="col-sm-5 control-label">Zip</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Zip" value="123 23" readonly
+                                                       placeholder="Organisationsnummer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="City" class="col-sm-5 control-label">City</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="City" value="Stockholm"
+                                                       readonly
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group">
-                                        <label for="Telephone" class="col-sm-5 control-label">Telephone</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Telephone" value="0723028460"
-                                                   placeholder="Organisationsnummer">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="Contact" class="col-sm-5 control-label">Contact</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Contact"
+                                                       value="Frank Almenning "
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Email" class="col-sm-5 control-label">Email</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Email"
-                                                   value="frank@almenning.se"
-                                                   placeholder="Organisationsnummer">
+                                        <div class="form-group">
+                                            <label for="Telephone" class="col-sm-5 control-label">Telephone</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Telephone"
+                                                       value="0723028460"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="bankgiro" class="col-sm-5 control-label">Bank Giro (for
-                                            disbursements)</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="bankgiro" value="5556-3212"
-                                                   placeholder="Organisationsnummer">
+                                        <div class="form-group">
+                                            <label for="Email" class="col-sm-5 control-label">Email</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Email"
+                                                       value="frank@almenning.se"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label">Account for disbursement</label>
+                                            <div class="col-md-7">
+                                                <div class="col-md-5 no-padding">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="opt1"
+                                                                   value="option1" checked>
+                                                            Bankgiro
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 no-padding">
+                                                    <input type="text" class="form-control" id="Bankgiro"
+                                                           value=""
+                                                           placeholder="">
+                                                </div>
+                                                <div class="col-md-5 no-padding">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="opt2"
+                                                                   value="option2">
+                                                            Plusgiro
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 no-padding">
+                                                    <input type="text" class="form-control" id="Plusgiro"
+                                                           value="" disabled
+                                                           placeholder="">
+                                                </div>
+                                            </div>
                                         </div>
                                     </div>
                                 </form>
                             </div>
-
-                            <div class="col-md-4">
-                                <legend>Signtories for the company</legend>
+                            <div class="col-md-12">
+                                <legend>Board members</legend>
                                 <table class="table">
                                     <thead>
                                     <tr>
                                         <th>Name</th>
                                         <th>SSN</th>
+                                        <th>Role</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td>Frank Almenning</td>
-                                        <td>19740504-2115</td>
+                                        <td>19740504-****</td>
+                                        <td></td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
 
-                            <div class="col-md-4">
+                            <div class="col-md-12">
                                 <legend>UBOs</legend>
                                 <table class="table">
                                     <thead>
@@ -327,13 +246,12 @@
                                     <tbody>
                                     <tr>
                                         <td>Frank Almenning</td>
-                                        <td>19740504-2115</td>
+                                        <td>19740504-****</td>
                                     </tr>
                                     </tbody>
                                 </table>
                             </div>
-
-                            <div class="col-md-8">
+                            <div class="col-md-12">
                                 <legend> Approved signatories (from Bolagsverket)</legend>
                                 <table class="table">
                                     <thead>
@@ -341,19 +259,19 @@
                                         <th>Name</th>
                                         <th>SSN</th>
                                         <th>Full rights to sign</th>
-                                        <th>Together with</th>
+                                        <th>Role</th>
                                     </tr>
                                     </thead>
                                     <tbody>
                                     <tr>
                                         <td>Frank Almenning</td>
-                                        <td>19740504-2115</td>
+                                        <td>19740504-****</td>
                                         <td>yes</td>
                                         <td>N/A</td>
                                     </tr>
                                     <tr>
                                         <td>Eigil Almenning</td>
-                                        <td>19770606-1234</td>
+                                        <td>19770606-****</td>
                                         <td>yes</td>
                                         <td>N/A</td>
                                     </tr>
@@ -364,21 +282,42 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <legend>PEP/RCA</legend>
                                 <div class="input-group">
                                     <label>
-                                        <input type="checkbox" value="">
+                                        <input type="checkbox" value="" checked>
                                         Is any one of the above-mentioned individuals considered PEP or RCA (see sidebar
                                         for
                                         definitions)?
                                     </label>
                                 </div>
+                                <table class="table">
+                                    <thead>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>SSN</th>
+                                        <th>PEP/RCA</th>
+                                    </tr>
+                                    </thead>
+                                    <tbody>
+                                    <tr>
+                                        <td>Frank Almenning</td>
+                                        <td>19740504-****</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Eigil Almenning</td>
+                                        <td>19770606-****</td>
+                                        <td><input type="checkbox"></td>
+                                    </tr>
+                                    </tbody>
+                                </table>
                             </div>
-                            <div class="col-md-6">
+                            <div class="col-md-12">
                                 <legend>Purposes of using our products</legend>
                                 <label>
-                                    Main purpose of using Spot Factoring?
+                                    Where do your business have the majority of Suppliers or Customers?
                                 </label>
                                 <div class="input-group">
                                     <label>
@@ -416,12 +355,19 @@
                         </div>
                         <div class="row">
                             <div class="pull-right">
-                                <p>
-                                    <button type="button" class="btn btn-primary margin-right">Sign</button>
-                                    <button type="button" class="btn btn-default margin-right">Cancel and return to
-                                        eEkonomi
+                                <div class="col-md-3 pull-right">
+                                    <button type="button" class="btn btn-default margin-right">Cancel and return to eEkonomi
                                     </button>
-                                </p>
+                                </div>
+                                <div class="col-md-3 pull-right">
+                                    <div class="input-group">
+                                         <span class="input-group-btn">
+                                           <button class="btn btn-primary" type="button">Sign</button>
+                                         </span>
+                                        <input style="height: 30px;" type="search" class="form-control" placeholder="19740504-****">
+                                    </div>
+                                </div>
+
                             </div>
                         </div>
                     </div>
