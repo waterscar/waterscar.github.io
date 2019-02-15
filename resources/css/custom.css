@@ -1,14 +1,14 @@
-th.name-column, td.name-column, th.ssn-column, td.ssn-column{
-    width: 250px;
-}
+/*th.name-column, td.name-column, th.ssn-column, td.ssn-column{*/
+    /*width: 250px;*/
+/*}*/
 
-th, td{
-    width: 100px;
-}
+/*th, td{*/
+    /*width: 100px;*/
+/*}*/
 
-table{
-   width: unset !important;
-}
+/*table{*/
+   /*width: unset !important;*/
+/*}*/
 
 /*
 For matching eAccounting current style

@@ -75,7 +75,7 @@
                         </li>
 
                         <li data-bind="visible: visible()">
-                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">UBOs</a>
+                            <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">Ultimate Beneficial Owner</a>
                         </li>
                         <li data-bind="visible: visible()">
                             <a data-bind="text: text, css: css, attr: { id: id }" class="purchases">Signatories</a>
@@ -109,111 +109,116 @@
                                 <legend>Company information</legend>
 
                                 <form class="form-horizontal">
-                                    <div class="form-group required">
-                                        <label for="inputKundnummer" class="col-sm-5 control-label">Company
-                                            name:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputKundnummer" readonly
-                                                   value="Frank Consulting AB"
-                                                   placeholder="Frank Consulting AB">
+                                    <div class="col-md-6">
+                                        <div class="form-group required">
+                                            <label for="inputKundnummer" class="col-sm-5 control-label">Company
+                                                name:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="inputKundnummer" readonly
+                                                       value="Frank Consulting AB"
+                                                       placeholder="Frank Consulting AB">
+                                            </div>
+                                        </div>
+                                        <div class="form-group required">
+                                            <label for="inputKundnamn"
+                                                   class="col-sm-5 control-label">Org.nummer:</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="inputKundnamn" readonly
+                                                       value="5563212354"
+                                                       placeholder="Kundnamn">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="inputOrganisationsnummer"
+                                                   class="col-sm-5 control-label">Address</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="inputOrganisationsnummer"
+                                                       readonly
+                                                       value="Gatan 23"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="Zip" class="col-sm-5 control-label">Zip</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Zip" value="123 23" readonly
+                                                       placeholder="Organisationsnummer">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="City" class="col-sm-5 control-label">City</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="City" value="Stockholm"
+                                                       readonly
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
                                     </div>
-                                    <div class="form-group required">
-                                        <label for="inputKundnamn"
-                                               class="col-sm-5 control-label">Org.nummer:</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputKundnamn" readonly
-                                                   value="5563212354"
-                                                   placeholder="Kundnamn">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="Contact" class="col-sm-5 control-label">Contact</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Contact"
+                                                       value="Frank Almenning "
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="inputOrganisationsnummer"
-                                               class="col-sm-5 control-label">Address</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="inputOrganisationsnummer"
-                                                   readonly
-                                                   value="Gatan 23"
-                                                   placeholder="Organisationsnummer">
+                                        <div class="form-group">
+                                            <label for="Telephone" class="col-sm-5 control-label">Telephone</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Telephone"
+                                                       value="0723028460"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Zip" class="col-sm-5 control-label">Zip</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Zip" value="123 23" readonly
-                                                   placeholder="Organisationsnummer">
+                                        <div class="form-group">
+                                            <label for="Email" class="col-sm-5 control-label">Email</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="Email"
+                                                       value="frank@almenning.se"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="City" class="col-sm-5 control-label">City</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="City" value="Stockholm"
-                                                   readonly
-                                                   placeholder="Organisationsnummer">
+                                        <div class="form-group">
+                                            <label for="EmailConfirm" class="col-sm-5 control-label">Confirmation email
+                                                address</label>
+                                            <div class="col-sm-7">
+                                                <input type="text" class="form-control" id="EmailConfirm"
+                                                       value="frank@almenning.se"
+                                                       placeholder="Organisationsnummer">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Contact" class="col-sm-5 control-label">Contact</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Contact"
-                                                   value="Frank Almenning "
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Telephone" class="col-sm-5 control-label">Telephone</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Telephone"
-                                                   value="0723028460"
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="Email" class="col-sm-5 control-label">Email</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="Email"
-                                                   value="frank@almenning.se"
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="EmailConfirm" class="col-sm-5 control-label">Confirmation email address</label>
-                                        <div class="col-sm-7">
-                                            <input type="text" class="form-control" id="EmailConfirm"
-                                                   value="frank@almenning.se"
-                                                   placeholder="Organisationsnummer">
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label class="col-md-5 control-label">Account for disbursement</label>
-                                        <div class="col-md-7">
-                                            <div class="col-md-5 no-padding">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="opt1"
-                                                               value="option1" checked>
-                                                        Bankgiro
-                                                    </label>
+                                        <div class="form-group">
+                                            <label class="col-md-5 control-label">Account for disbursement</label>
+                                            <div class="col-md-7">
+                                                <div class="col-md-5 no-padding">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="opt1"
+                                                                   value="option1" checked>
+                                                            Bankgiro
+                                                        </label>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                            <div class="col-md-7 no-padding">
-                                                <input type="text" class="form-control" id="Bankgiro"
-                                                       value=""
-                                                       placeholder="">
-                                            </div>
-                                            <div class="col-md-5 no-padding">
-                                                <div class="radio">
-                                                    <label>
-                                                        <input type="radio" name="optionsRadios" id="opt2"
-                                                               value="option2">
-                                                        Plusgiro
-                                                    </label>
+                                                <div class="col-md-7 no-padding">
+                                                    <input type="text" class="form-control" id="Bankgiro"
+                                                           value="5231-3214"
+                                                           placeholder="">
                                                 </div>
-                                            </div>
-                                            <div class="col-md-7 no-padding">
-                                                <input type="text" class="form-control" id="Plusgiro"
-                                                       value="" disabled
-                                                       placeholder="">
+                                                <div class="col-md-5 no-padding">
+                                                    <div class="radio">
+                                                        <label>
+                                                            <input type="radio" name="optionsRadios" id="opt2"
+                                                                   value="option2">
+                                                            Plusgiro
+                                                        </label>
+                                                    </div>
+                                                </div>
+                                                <div class="col-md-7 no-padding">
+                                                    <input type="text" class="form-control" id="Plusgiro"
+                                                           value="" disabled
+                                                           placeholder="">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -240,7 +245,7 @@
                             </div>
 
                             <div class="col-md-12">
-                                <legend>UBOs</legend>
+                                <legend>Ultimate Beneficial Owner</legend>
                                 <table class="table">
                                     <thead>
                                     <tr>
